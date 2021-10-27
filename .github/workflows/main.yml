@@ -4,12 +4,13 @@ jobs:
   python-lint:
     runs-on: ubuntu-latest
     name: CI-linter
+    working-directory: ./nirjas
     steps:
       - name: checkout source repo
         uses: actions/checkout@v2
 
       - name: linting
-        working-directory: ./nirjas
+
         uses: alexanderdamiani/pylinter@v1.3.0
 
         with:
