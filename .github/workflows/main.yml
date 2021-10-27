@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: linting
+        working-directory: ./nirjas
         uses: alexanderdamiani/pylinter@v1.3.0
         working-directory: /nirjas
         with:
