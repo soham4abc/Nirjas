@@ -3,13 +3,14 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   python-lint:
     runs-on: ubuntu-latest
-    name: CI workflow
+    name: CI-linter
     steps:
       - name: checkout source repo
         uses: actions/checkout@v2
 
       - name: linting
         uses: alexanderdamiani/pylinter@v1.3.0
+        working-directory: /nirjas
         with:
           python-root: "."
           flake8-flags: ""
